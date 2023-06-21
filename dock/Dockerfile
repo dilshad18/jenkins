@@ -3,7 +3,7 @@ FROM ubuntu:latest
 
 # Install dependencies (if needed)
 RUN apt-get update && \
-    apt-get install -y <your-package-dependencies>
+    apt-get install -y curl
 
 # Expose a port (if needed)
 EXPOSE 8080
