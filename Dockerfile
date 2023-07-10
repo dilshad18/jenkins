@@ -1,12 +1,9 @@
-# Base image
-FROM ubuntu:latest
+# Use a base image
+FROM alpine:latest
 
-# Install dependencies (if needed)
-RUN apt-get update && \
-    apt-get install -y curl
+# Set the working directory
+WORKDIR /app
 
-# Expose a port (if needed)
-EXPOSE 8080
 
-# Define the command to run when the container starts
-CMD ["sh", "-c", "echo 'Testing Docker image build' && sleep 10s "]
+# Set the command to run when the container starts
+CMD [ "echo", "Hello, Docker!" ]
